@@ -1,0 +1,38 @@
+{
+  "name": "challenge-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^1.5.1",
+    "apollo-boost": "^0.1.14",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "mongodb": "^3.0.10",
+    "mongoose": "^5.2.7",
+    "node": "^10.2.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.0",
+    "react-apollo": "^2.1.11",
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom && ava",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.3",
+    "redux-devtools": "^3.4.1"
+  },
+  "proxy": "http://localhost:4000"
+}
