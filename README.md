@@ -7,8 +7,9 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 This project is a full-stack study that intends to describe all players participating in all World Cup by the Brazilian team. The stack of the project includes  :  React , Redux , GraphQL, Express and Mongoose.
 
-## Setup 
+## Setup on terminal
 ```terminal
+git clone https://github.com/felipeeu/worldcup-brazil-teams.git
 cd worldcup-brazil-teams
 npm install
 npm start
