@@ -9,7 +9,7 @@ This project is a full-stack study that intends to describe all players particip
 
 ## Setup 
 ```terminal
-cd WC-brazil-teams
+cd worldcup-brazil-teams
 npm install
 npm start
 ```
