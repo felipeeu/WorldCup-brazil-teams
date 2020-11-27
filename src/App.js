@@ -14,8 +14,10 @@ import {
   Button,
   Toolbar,
   Typography,
-  withStyles
+  withStyles,
+  IconButton
 } from "@material-ui/core";
+import BackIcon from "./assets/icons/back_icon";
 
 const cache = new InMemoryCache();
 
@@ -28,13 +30,18 @@ const styles = theme => ({
   input: {
     display: "none"
   },
-  appHeader: {},
+
   app: {
     flexGrow: 1
   },
 
   appTitle: {
     fontSize: "2.0em"
+  },
+
+  toolbar: {
+    display: "flex",
+    justifyContent: "space-between"
   }
 });
 class App extends Component {
@@ -44,25 +51,25 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <div className={classes.app}>
-          <AppBar className={classes.appHeader} position="static">
+          <AppBar position="static">
             <Toolbar className={classes.toolbar}>
               <Typography className={classes.appTitle}>
                 Brasil nas Copas
               </Typography>
+
+              {yearState ? (
+                <IconButton
+                  onClick={() => this.props.setYear(null)}
+                  component={Link}
+                  to="/"
+                  color="secondary"
+                  variant="contained"
+                >
+                  <BackIcon />
+                </IconButton>
+              ) : null}
             </Toolbar>
           </AppBar>
-          {yearState ? (
-            <Button
-              onClick={() => this.props.setYear(null)}
-              component={Link}
-              to="/"
-              color="secondary"
-              variant="contained"
-              className={classes.button}
-            >
-              Voltar
-            </Button>
-          ) : null}
           <Routes year={yearState} />
         </div>
       </ApolloProvider>
