@@ -4,7 +4,7 @@ const schema = require('./schema.js');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://felipeeu:fevi2406@clusterfelipe-kdk6j.mongodb.net/test?retryWrites=true");
+mongoose.connect("mongodb+srv://felipeeu:fevi2406@clusterfelipe-kdk6j.mongodb.net/test?retryWrites=true", {useUnifiedTopology: true});
 
 let port = process.env.PORT || 4000;
 
